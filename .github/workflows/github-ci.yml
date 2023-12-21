@@ -20,7 +20,7 @@ jobs:
       - name: Set up OpenGL Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libglfw3-dev libglm-dev
+          sudo apt-get install -y libglfw3-dev libglm-dev libgtest-dev
 
       - name: CMake Action
         uses: threeal/cmake-action@v1.3.0
