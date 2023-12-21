@@ -15,10 +15,11 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3            
 
-      - name: Set up CMake
-        uses: lukka/get-cmake@v1
+      - name: CMake Action
+        uses: threeal/cmake-action@v1.3.0
+          
 
       - name: Set up OpenGL Dependencies
         run: |
@@ -36,8 +37,3 @@ jobs:
         run: |
           cd build
           ctest
-
-      - name: Run the Application (Replace with your run command)
-        run: |
-          cd build
-          ./your_application_executable
