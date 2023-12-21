@@ -3,6 +3,7 @@ project(minecraft_clone)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated")
 
 enable_testing()
 
@@ -45,7 +46,7 @@ foreach(TEST_SOURCE ${TEST_SOURCES})
     target_link_libraries(${TEST_NAME} PRIVATE 
         OpenGL::GL
         glfw 
-        glm
+        ${GLM_LIBRARY}
         GTest::GTest 
         GTest::Main
     )

@@ -29,10 +29,10 @@ jobs:
         run: |
           mkdir -p build
           cd build
-          cmake ..
+          cmake .. -Wno-dev
           make
 
-      - name: Run Tests (Replace with your test command)
+      - name: Run Tests
         run: |
           cd build
           ctest
